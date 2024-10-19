@@ -1,4 +1,4 @@
-// Package auth
+// Package jwt
 /*********************************************************************************************************************
 * ProjectName:  api_gateway
 * FileName:     jwt_service.go
@@ -7,7 +7,7 @@
 * CreateDate:   2024-10-19 11:22:10
 * Copyright ©2011-2024. Hunan xyz Company limited. All rights reserved.
 * *********************************************************************************************************************/
-package auth
+package jwt
 
 import (
 	"os"

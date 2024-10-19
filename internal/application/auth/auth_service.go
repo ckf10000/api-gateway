@@ -11,6 +11,7 @@ package auth
 
 import (
 	"api_gateway/internal/common/utils/log"
+	"api_gateway/internal/domain/service/jwt"
 	"github.com/gogf/gf/frame/g"
 	"github.com/gogf/gf/net/ghttp"
 	"net/http"
@@ -21,7 +22,7 @@ func Login(r *ghttp.Request) {
 	password := r.GetString("password")
 
 	if username == "user" || password == "pass" {
-		token, err1 := GenerateToken(username)
+		token, err1 := jwt.GenerateToken(username)
 		if err1 != nil {
 			log.Logger.Error("Generate token err:", err1)
 			r.Response.WriteStatus(http.StatusInternalServerError)
