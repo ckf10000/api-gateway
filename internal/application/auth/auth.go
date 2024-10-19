@@ -1,7 +1,7 @@
 // Package auth
 /*********************************************************************************************************************
 * ProjectName:  api_gateway
-* FileName:     auth_service.go
+* FileName:     auth.go
 * Description:  TODO
 * Author:       mfkif
 * CreateDate:   2024-10-19 11:21:09
