@@ -18,14 +18,20 @@ import (
 
 var jwtSecret = []byte(os.Getenv("JWT_SECRET"))
 
-func GenerateToken(userID string) (string, error) {
+func generateExp() int64 {
+	return time.Now().Add(time.Hour * TokenExp).Unix()
+}
+
+func GenerateToken(userID string) (int64, string, error) {
+	exp := generateExp()
 	claims := jwt.MapClaims{
 		"user_id": userID,
-		"exp":     time.Now().Add(time.Hour * tokenExp).Unix(),
+		"exp":     exp,
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	return token.SignedString(jwtSecret)
+	tokenStr, err := token.SignedString(jwtSecret)
+	return exp, tokenStr, err
 }
 
 func ValidateToken(tokenString string) (string, error) {

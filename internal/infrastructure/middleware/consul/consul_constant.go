@@ -1,14 +1,17 @@
-// Package auth
+// Package consul
 /*********************************************************************************************************************
 * ProjectName:  api_gateway
-* FileName:     auth_constant.go
+* FileName:     consul_constant.go
 * Description:  TODO
-* Author:       mfkif
-* CreateDate:   2024-10-19 15:15:12
+* Author:       mfkifhss2023
+* CreateDate:   2024-10-19 23:37:33
 * Copyright ©2011-2024. Hunan xyz Company limited. All rights reserved.
 * *********************************************************************************************************************/
-package auth
+package consul
 
 const (
-	tokenExp = 24
+	id      = "api-gateway"
+	name    = "api-gateway"
+	address = "192.168.144.201"
+	port    = 8080
 )

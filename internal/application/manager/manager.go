@@ -1,14 +1,18 @@
-// Package jwt
+// Package manager
 /*********************************************************************************************************************
 * ProjectName:  api_gateway
-* FileName:     jwt_constant.go
+* FileName:     manager.go
 * Description:  TODO
-* Author:       mfkif
-* CreateDate:   2024-10-19 17:26:16
+* Author:       mfkifhss2023
+* CreateDate:   2024-10-20 00:48:47
 * Copyright ©2011-2024. Hunan xyz Company limited. All rights reserved.
 * *********************************************************************************************************************/
-package jwt
+package manager
 
-const (
-	TokenExp = 24
+import (
+	"api_gateway/internal/domain/service/register"
 )
+
+func RegisterService() {
+	register.NewRegisterService()
+}
